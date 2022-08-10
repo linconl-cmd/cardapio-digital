@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    
+}
+
+
+
+:root {
+    --bg-color: #FFFCDF;
+    --btn-color:#C6892C;
+    --bordinha:#901C1C; 
+}
+
+
+body {
+    background: var(--bg-color);
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+    margin: 40px auto;
+    gap: 20px;
+}
+
+.logo-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid var(--bordinha);
+}
+
+
+.titulo-btn {
+    font-size: 2.3rem;
+    color: var(--bordinha);
+}
+
+.btn {
+   background: var(--btn-color);
+   color: #ffff;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 0.7px solid var(--bordinha);
+    font-size: 1.1rem;
+    padding:15px;
+    font-weight: bold;
+}
+
+
+.container a:hover {
+    font-size:1.5rem ;
+    background: var(--bordinha);
+}
+
+footer {
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.link-footer {
+    text-decoration: none;
+    color: #000000;
+}
+
+.link-footer:hover {
+    color: blue;
+}
+
+
+@media screen and (min-width:1024px) {
+    .container {
+        width: 40vw;
+    }
+
+    footer {
+        margin-top: 9vw;
+    }
+}
+

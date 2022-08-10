@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    
+}
+
+:root {
+    --bg-color: #FFFCDF;
+    --btn-color:#C6892C;
+    --bordinha:#901C1C; 
+}
+
+body {
+    background: var(--bg-color);
+}
+
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.caixa {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+.cabecalho .container {
+    width: 100%;
+    min-height: 60px;
+    padding: 0 10px;
+    margin: 0 auto;
+
+}
+
+
+.cabecalho__img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.cabecalho__links  {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid var(--btn-color);
+    align-items: center;
+    height: 15vh;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile-menu {
+    cursor: pointer;
+    display: none;
+}
+
+
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--btn-color);
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.nav-list li a {
+ text-decoration: none;
+ margin-right: 2rem;
+ color: var(--bordinha);
+}
+
+
+.titulo-cardapio {
+    align-items: center;
+    text-align: center;
+    margin: 5rem 0;
+    color: var(--bordinha);
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+
+.subtitulo-sabor {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3rem;
+    
+}
+
+.link-opcoes {
+    margin: 2rem;
+    padding-right: 2rem;
+    text-decoration: none;
+    color: var(--bordinha);
+    font: 1rem;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-transform: uppercase;   
+}
+
+
+
+.link-cardapio {
+    text-decoration: underline;
+    color: var(--btn-color);       
+}
+
+
+.pizza-brotinho {
+    margin-bottom: 4rem;
+}
+
+
+
+.sabores-sub{
+    color: var(--bg-color);
+    text-transform: uppercase;
+    text-align: center;
+    width: 96%;
+    margin-top: 2rem;
+    border: 1px solid var(--bordinha) ;
+    padding: 0.8rem;
+    background: var(--btn-color);
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+
+
+.sabores-link {
+    text-decoration: none;
+}
+
+.sabores-sub:hover {
+    background: var(--bordinha);
+    font-size: 1.4rem;
+}
+
+footer {
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.link-footer {
+    text-decoration: none;
+    color: #000000;
+}
+
+.link-footer:hover {
+    color: blue;
+}
+
+
+
+
+@media  (max-width: 999px) {
+
+    body {
+        overflow-x:hidden;
+    }
+    .nav-list {
+        position: absolute;
+        right: 0;
+        top:15vh;
+        width: 50vw;
+        height: 92vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content:space-around;
+        background: var(--bg-color);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        
+    }
+
+    .nav-list li a {
+        text-decoration: underline;
+        
+    }
+    .nav-list li a:hover {
+        color: var(--btn-color);
+        
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+    }
+
+    @keyframes navlinkFade {
+      from {
+        opacity: 0;
+        transform: translateX(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0)
+      }
+    }
+
+
+
+    .caixa {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+    }
+
+    .titulo-cardapio  {
+        font-size: small;
+        margin: 2rem 0;
+    }
+
+
+    .subtitulo-sabor {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        line-height: 1rem;
+        margin-left: 0 1rem;
+        
+        
+        
+    }
+
+
+    .link-opcoes {
+        font-size: 1rem;
+    }
+
+    .link-cardapio  {
+        border: 2px solid var(--btn-color);
+        color: var(--bg-color);
+        background: var(--btn-color);
+        text-decoration: none;
+    }
+
+    footer {
+        margin-top: 9vw;
+    }
+}
+
+
+.mobile-menu.active .line-1 {
+    transform:rotate(-45deg) translate(-8px, 8px);
+}
+
+
+.mobile-menu.active .line-2 {
+    opacity: 0;
+}
+
+
+.mobile-menu.active .line-3 {
+    transform:rotate(45deg) translate(-5px, -7px);
+}
+

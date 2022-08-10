@@ -1,0 +1,86 @@
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+
+section {
+    gap: 3rem;
+}
+
+
+.dicas-importantes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 2px solid var(--btn-color);
+    border-radius: 2rem;
+    padding: 2rem;
+}
+
+.mini-pizza {
+    margin-top: 3rem;
+}
+
+
+.titulo-dicas {
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--bordinha);
+}
+
+.descricao-titulo{
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 3rem 0;
+}
+
+
+.subtitulo-dicas, .subtitulo-arm {
+    text-align: center;
+    margin: 3rem 0;
+    font-weight: bold;
+    color: var(--bordinha);
+}
+
+.subtitulo {
+    text-align: center;
+    margin: 3rem 0;
+    font-weight: bold;
+}
+
+.caixa-armazenamento{
+    margin-top: 8rem;
+}
+
+.caixa-dicas {
+    margin-right: 2rem;
+}
+
+.armazenamento {
+    margin: 5rem auto;
+}
+
+
+@media (max-width:999px) {
+
+    .container {
+    margin:auto 3rem;
+   }
+
+   .titulo-dicas {
+    font-size: 1.5rem;
+   }
+
+   .dicas-importantes {
+    display:flex;
+    flex-direction: column;
+    padding:0;
+   }
+
+   .caixa-dicas {
+    text-align: center;
+    margin-left: 2rem;
+   }
+}

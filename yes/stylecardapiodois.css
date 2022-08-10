@@ -1,0 +1,13 @@
+:root {
+    --bg-color: #FFFCDF;
+    --btn-color:#C6892C;
+    --bordinha:#901C1C; 
+}
+
+.titulo-mini {
+    display: flex;
+    justify-content: space-around;
+    color:var(--bordinha);
+}
+
+
